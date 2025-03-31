@@ -19,12 +19,16 @@ const PageBase = ({
   children,
 }: PageBaseProps) => {
   const fluidCssClass = fluid ? "-fluid" : "";
+  const templateTheme = theme || "dark";
+  const templateTitle = title || "BearServers";
+
+  document.body.setAttribute("data-bs-theme", templateTheme);
 
   return (
-    <div data-bs-theme={theme || "dark"}>
+    <div data-bs-theme={templateTheme}>
       <div className="bg-light-subtle text-body">
         {/* Nav */}
-        <NavBar title={title || "BearServers"} links={links} />
+        <NavBar title={templateTitle} links={links} />
 
         {/* Main content */}
         <div className={`container${fluidCssClass} mt-5`}>{children}</div>

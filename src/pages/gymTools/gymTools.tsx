@@ -4,7 +4,7 @@ const GymToolsHomePage = () => {
   return (
     <GymToolsBase path="/gym-tools">
       <div className="container mb-5">
-        <h2 className="">Gym tools</h2>
+        <h1 className="">Gym tools</h1>
         <p className="mb-4">Gym tools making gym easier for the bros</p>
         <div className="card">
           <div className="card-body">
