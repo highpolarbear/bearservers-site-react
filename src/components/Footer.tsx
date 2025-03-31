@@ -2,38 +2,48 @@ import polarBearSvg from "../assets/polar_bear.svg";
 
 const Footer = () => {
   return (
-    <footer className="bg-dark text-white py-5 mt-3">
+    <footer className="bg-dark text-white">
       <div className="container">
-        <div className="row">
-          <div className="col-md-4">
+        <div className="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5">
+          <div className="col mb-3">
+            <a
+              href="/"
+              className="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none"
+            >
+              <img
+                src={polarBearSvg}
+                alt="polar bear"
+                className="img-fluid"
+                width="100"
+              />
+            </a>
+            <p className="text-body-secondary">© bearservers.co.uk 2025</p>
+          </div>
+
+          <div className="col mb-3"></div>
+
+          <div className="col mb-3"></div>
+
+          <div className="col mb-3"></div>
+
+          <div className="col mb-3">
             <h5>Links</h5>
-            <ul className="list-unstyled">
-              <li>
-                <a href="/" className="text-white">
+            <ul className="nav flex-column">
+              <li className="nav-item mb-2">
+                <a href="/" className="nav-link p-0 text-body-secondary">
                   Home
                 </a>
               </li>
-              <li>
-                <a href="/gym-tools" className="text-white">
+              <li className="nav-item mb-2">
+                <a
+                  href="/gym-tools"
+                  className="nav-link p-0 text-body-secondary"
+                >
                   gym-tools
                 </a>
               </li>
             </ul>
           </div>
-          <div className="col-md-4">
-            <br />
-          </div>
-          <div className="col-md-4">
-            <img
-              src={polarBearSvg}
-              alt="polar bear"
-              className="img-fluid float-end"
-              width="100"
-            />
-          </div>
-        </div>
-        <div className="text-center">
-          <small>&copy; 2025 BearServers.co.uk | All rights reserved.</small>
         </div>
       </div>
     </footer>
