@@ -22,9 +22,11 @@ const WeightCutPage = () => {
   }, [initWeight, initBodyFat, targetBodyFat]);
 
   const convertWeeksToMonthsAndWeeks = (weeks: number) => {
-    const months = Math.floor(weeks / 4.345); // Calculate whole months
-    const remainingWeeks = Math.round(weeks % 4.345); // Calculate remaining weeks
+    // const months = Math.floor(weeks / 4.345); // Calculate whole months
+    // const remainingWeeks = Math.round(weeks % 4.345); // Calculate remaining weeks
 
+    const months = Math.floor(weeks / 4); // Calculate whole months
+    const remainingWeeks = Math.round(weeks % 4); // Calculate remaining weeks
     return `${months} Month(s) and ${remainingWeeks} week(s)`;
   };
 
