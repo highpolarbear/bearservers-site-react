@@ -36,7 +36,7 @@ const WeightCutPage = () => {
     e: ChangeEvent<HTMLInputElement>,
     setFunc: Dispatch<SetStateAction<undefined | number>>
   ) => {
-    if (isNaN(e.target.value)) {
+    if (isNaN(e.target.value as any)) {
       setFunc(undefined);
       return;
     }
