@@ -9,7 +9,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/gym-utils">
+        <Route path="/gym-tools">
           <Route index element={<HomePage />} />
           <Route path="weight-cut" element={<WeightCutPage />} />
           <Route path="weight-cut.html" element={<WeightCutPage />} />
