@@ -21,7 +21,7 @@ const PageBase = ({
   const fluidCssClass = fluid ? "-fluid" : "";
 
   return (
-    <body data-bs-theme={theme || "dark"}>
+    <div data-bs-theme={theme || "dark"}>
       <div className="bg-light-subtle text-body">
         {/* Nav */}
         <NavBar title={title || "BearServers"} links={links} />
@@ -32,7 +32,7 @@ const PageBase = ({
         {/* Footer */}
         <Footer />
       </div>
-    </body>
+    </div>
   );
 };
 
