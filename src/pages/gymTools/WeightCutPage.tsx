@@ -95,7 +95,7 @@ const WeightCutPage = () => {
       <div className="form-group mt-4">
         <label htmlFor="userInput">Initial Weight (kg)</label>
 
-        <div className="input-group mt-1">
+        <div className="input-group has-validation mt-1">
           <input
             type="text"
             className={`form-control ${
@@ -114,7 +114,7 @@ const WeightCutPage = () => {
       <div className="form-group pt-2">
         <label htmlFor="userInput">Initial Body Fat %</label>
 
-        <div className="input-group mt-1">
+        <div className="input-group has-validation mt-1">
           <input
             type="text"
             className={`form-control ${
@@ -137,7 +137,7 @@ const WeightCutPage = () => {
 
       <div className="form-group pt-2">
         <label htmlFor="userInput">Target Body Fat %</label>
-        <div className="input-group mt-1">
+        <div className="input-group has-validation mt-1">
           <input
             type="text"
             className={`form-control ${
