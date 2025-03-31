@@ -198,20 +198,31 @@ const WeightCutPage = () => {
 
           <div className="card mt-4 mb-4">
             <div className="card-body">
-              <h5 className="card-title">Your target weight would be</h5>
-              <strong id="results">
-                {resultWeight
-                  ? `~${resultWeight.toFixed(2)} KG`
-                  : "Please complete the above values"}
-              </strong>
+              <div className="d-flex flex-row mb-3 pt-4">
+                <i className="bi bi-patch-minus-fill pe-3"></i>
+                <div>
+                  <h5 className="card-title">Your target weight would be</h5>
+                  <strong id="results">
+                    {resultWeight
+                      ? `~${resultWeight.toFixed(2)} KG`
+                      : "Please complete the above values"}
+                  </strong>
+                </div>
+              </div>
 
-              <h5 className="card-title pt-4">It will take you about</h5>
-              <strong id="resultsApproxTime">
-                {timePer50loss && timePer25loss
-                  ? getAppoxTimeline(timePer50loss, timePer25loss)
-                  : "..."}
-              </strong>
-              <p className="pb-2">to reach your goal</p>
+              <div className="d-flex flex-row mb-3 pt-4">
+                <i className="bi bi-calendar-date pe-3"></i>
+
+                <div>
+                  <h5 className="card-title">It will take you about</h5>
+                  <strong id="resultsApproxTime">
+                    {timePer50loss && timePer25loss
+                      ? getAppoxTimeline(timePer50loss, timePer25loss)
+                      : "..."}
+                  </strong>
+                  <p className="pb-2">to reach your goal</p>
+                </div>
+              </div>
 
               <hr />
 
