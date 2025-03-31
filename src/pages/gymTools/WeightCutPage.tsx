@@ -163,56 +163,66 @@ const WeightCutPage = () => {
         </div>
       </div>
 
-      <div className="card mt-4 mb-4">
-        <div className="card-body">
-          <div className="d-flex flex-row mb-3 pt-4">
-            <i className="bi bi-patch-minus-fill pe-3"></i>
-            <div>
-              <h5 className="card-title">Your target weight would be</h5>
-              <strong id="results">
-                {resultWeight
-                  ? `~${resultWeight.toFixed(2)} KG`
-                  : "Please complete the above values"}
-              </strong>
+      <div className="mt-4 mb-4 row d-flex flex-wrap">
+        <div className="col-12 col-md-6">
+          <div className="card mt-1 mb-1">
+            <div className="card-body">
+              <div className="d-flex flex-row mb-3 pt-4">
+                <i className="bi bi-patch-minus-fill pe-3"></i>
+                <div>
+                  <h5 className="card-title">Your target weight would be</h5>
+                  <strong id="results">
+                    {resultWeight
+                      ? `~${resultWeight.toFixed(2)} KG`
+                      : "Please complete the above values"}
+                  </strong>
+                </div>
+              </div>
             </div>
           </div>
+          <div className="card mt-1 mb-1">
+            <div className="card-body">
+              <div className="d-flex flex-row mb-3 pt-4">
+                <i className="bi bi-calendar-date pe-3"></i>
 
-          <div className="d-flex flex-row mb-3 pt-4">
-            <i className="bi bi-calendar-date pe-3"></i>
-
-            <div>
-              <h5 className="card-title">It will take you about</h5>
-              <strong id="resultsApproxTime">
-                {timePer50loss && timePer25loss
-                  ? getAppoxTimeline(timePer50loss, timePer25loss)
+                <div>
+                  <h5 className="card-title">It will take you about</h5>
+                  <strong id="resultsApproxTime">
+                    {timePer50loss && timePer25loss
+                      ? getAppoxTimeline(timePer50loss, timePer25loss)
+                      : "..."}
+                  </strong>
+                  <p className="pb-2">to reach your goal</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="col-12 col-md-6 d-flex flex-column">
+          <div className="card mt-1 mb-1 flex-fill">
+            <div className="card-body">
+              <h6 className="card-title pt-2">
+                On a cut with a loss of 0.25kg/week, it would take
+              </h6>
+              <strong id="results_twenty_five">
+                {timePer25loss
+                  ? convertWeeksToMonthsAndWeeks(timePer25loss)
                   : "..."}
               </strong>
-              <p className="pb-2">to reach your goal</p>
+              <p>to reach your goal</p>
+
+              <h6 className="card-title pt-4">
+                On a cut with a loss of 0.5kg/week, it would take{" "}
+              </h6>
+              <strong id="results_fifty">
+                {" "}
+                {timePer50loss
+                  ? convertWeeksToMonthsAndWeeks(timePer50loss)
+                  : "..."}{" "}
+              </strong>
+              <p>to reach your goal</p>
             </div>
           </div>
-
-          <hr />
-
-          <h6 className="card-title pt-2">
-            On a cut with a loss of 0.25kg/week, it would take
-          </h6>
-          <strong id="results_twenty_five">
-            {timePer25loss
-              ? convertWeeksToMonthsAndWeeks(timePer25loss)
-              : "..."}
-          </strong>
-          <p>to reach your goal</p>
-
-          <h6 className="card-title pt-4">
-            On a cut with a loss of 0.5kg/week, it would take{" "}
-          </h6>
-          <strong id="results_fifty">
-            {" "}
-            {timePer50loss
-              ? convertWeeksToMonthsAndWeeks(timePer50loss)
-              : "..."}{" "}
-          </strong>
-          <p>to reach your goal</p>
         </div>
       </div>
       <p className="small text-secondary">
