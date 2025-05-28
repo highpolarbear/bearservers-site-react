@@ -5,6 +5,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import HomePage from "./pages/Homepage/Homepage";
 import WeightCutPage from "./pages/gymTools/WeightCutPage";
 import GymToolsHomePage from "./pages/gymTools/gymTools";
+import { UserPage } from "./pages/UserPage/UserPage";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route index element={<GymToolsHomePage />} />
           <Route path="weight-cut" element={<WeightCutPage />} />
           <Route path="weight-cut.html" element={<WeightCutPage />} />
+          <Route path="user" element={<UserPage />} />
         </Route>
       </Routes>
     </BrowserRouter>
